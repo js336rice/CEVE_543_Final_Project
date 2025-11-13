@@ -1,16 +1,9 @@
 ---
-title: "Lab 1: Setup & Hello World"
-subtitle: "Julia Installation, GitHub Classroom Workflow, and Quarto Basics"
+title: "Truncated SVD Lecture Notes"
+subtitle: "CEVE 543 Final Presentation"
 author: Jonah Schaechter # edit this line only
-date: 2025-08-29
-type: "lab"
-module: 1
-week: 1
-topics: ["Julia installation", "GitHub workflow", "Quarto basics"]
-objectives:
-  - "Ensure fully functional software environment"
-  - "Establish reproducible analysis workflow"
-ps_connection: "Establishes the Julia/Quarto/GitHub workflow used throughout PS1"
+date: 2025-11-14
+
 
 engine: julia
 julia:
@@ -48,7 +41,7 @@ code-line-numbers: false
 code-block-font-size: "0.85em"
 ---
 
-Welcome to Lab 1! This is our first hands-on session where we'll set up and test all the essential tools you'll be using throughout the course. Think of this as building your computational toolkit - we'll install Julia, VS Code, Quarto, and GitHub tools, then create a simple but meaningful plot to make sure everything is working correctly. By the end of this lab, you'll have a fully functional development environment and will have completed your first reproducible analysis workflow. Don't worry if some of these tools are new to you - we'll walk through everything step by step, and this foundation will make all future assignments much smoother!
+Lecture Notes!  For Final Project!  Test Render!
 
 ## Before
 
@@ -85,34 +78,20 @@ You will do these things every time you start a new lab or problem set.
 
 ## Code
 
-We will create a basic plot from [the tutorial](https://docs.makie.org/dev/tutorials/getting-started).
-This will verify that your installation is running and working correctly.
 
 ```{julia}
-using CairoMakie # <1>
-using LaTeXStrings
+#| eval: false
+from sklearn.decomposition import TruncatedSVD
+from scipy.sparse import csr_matrix
+import numpy as np
+np.random.seed(0)
+X_dense = np.random.rand(100, 100)
+X_dense[:, 2 * np.arange(50)] = 0
+X = csr_matrix(X_dense)
+svd = TruncatedSVD(n_components=5, n_iter=7, random_state=42)
+svd.fit(X)
+print(svd.explained_variance_ratio_)
+print(svd.explained_variance_ratio_.sum())
+print(svd.singular_values_)
 ```
 
-1. This is a code annotation. `using` is the keyword we say in Julia to add a package, in this case `CairoMakie`
-
-```{julia}
-#| output: false
-my_netid = "js336" # edit this line
-```
-
-Do not change this
-
-```{julia}
-x = range(0, 10; length=100)
-y_true = sin.(x)
-# Add noise to create measurements
-noise = 0.2 * randn(length(x))
-y_measurements = y_true .+ noise
-
-f = Figure()
-ax = Axis(f[1, 1]; title="Plot of y = sin(x) by $(my_netid)", xlabel=L"$x$", ylabel=L"$y$")
-scatter!(ax, x, y_measurements; color=:tomato, label="Noisy measurements")
-lines!(ax, x, y_true; color=:blue, linestyle=:dash, label="True Value")
-axislegend(; position=:rb)
-f
-```
