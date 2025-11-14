@@ -41,43 +41,52 @@ code-line-numbers: false
 code-block-font-size: "0.85em"
 ---
 
-Lecture Notes!  For Final Project!  Test Render!
-
-## Before
-
-::: {.callout-important}
-## Pre-req
-
-Do this before the lab date so that lab itself can go more smoothly.
-:::
-
-This lab assumes some elementary knowledge of the command line.
-If you're a novice, the best place to learn about the command line is the [Software Carpentries Lesson on The Unix Shell](https://swcarpentry.github.io/shell-novice/).
-
-1. Install Julia, VS Code, Quarto, GitHub Desktop and the Julia / Quarto VS Code extensions following the instructions on [the textbook website](https://dossgollin-lab.github.io/climate-risk-management-reference/chapters/appendices/software.html). You can read more about installation and background on that page. Note that if you are an experienced user of other IDEs or git interfaces, VS Code and GitHub Desktop are not strictly required.
-1. Create a single folder on your computer to hold all of your CEVE 543 labs. This should be a folder on your computer that is not synced with Google Drive, Microsoft SharePoint, etc.
-1. **Create a GitHub account.** If you already have a GitHub account, you can use that for this course and do not need to create a new account.
-Otherwise, [create an account](https://github.com/join). It doesn't have to be linked to your Rice email or your NetID.
-1. **Get GitHub Copilot.** As a student, you can get GitHub Copilot for free by following the instructions at https://github.com/education/students by clicking "Join GitHub education".
 
 
-## Tasks
+## Mathematical Framework
 
-You will do these things every time you start a new lab or problem set.
+- **Start from the full SVD**
+  - Any real matrix \(A \in \mathbb{R}^{m \times n}\) can be decomposed into
 
-1. **Open this repository in GitHub classroom.** For labs and problem sets, you should use the GitHub Classroom link posted on Canvas to "accept" the assignment, which will give you your own GitHub repository for that assignment. The first time you click one of these links, you will need to link your place on the course roster with your GitHub account.
-1. **Clone your repository** to your computer. See the instructions on the textbook website for background on what cloning is. The easiest way to clone is using GitHub Desktop.
-1. **Open the Repository in VS Code.** You can do this directly from VS Code. You can also do this from your command line.
-1. **Modify code.** You need to make two edits: (1) Replace "CEVE 543 Fall 2025" with your name in the author field at the top of the document, and (2) modify the `my_netid` variable in the code section below to use your actual NetID instead of the placeholder "jd82".
-1. **Activate and instantiate the environment.** In VS Code, open the terminal and run `julia --project=.` to start Julia with the project environment. Then run `using Pkg; Pkg.instantiate()` to install all required packages for this lab.
-1. **Preview.** In VS Code, open the Command Palette (Cmd+Shift+P on Mac, Ctrl+Shift+P on Windows/Linux) and run "Quarto: Preview" to preview your document in a web browser. This will show you how your document looks and execute the Julia code.
-1. **Push to GitHub.** Save your changes and commit them using GitHub Desktop or the command line (`git add .`, `git commit -m "Complete lab 1"`, `git push`). This uploads your completed work to your GitHub repository.
-1. **Pull any automated pull requests.**  This course uses [BlueStyle](https://github.com/invenia/BlueStyle) for Julia code formatting, which is automatically applied via [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/stable/). This will make your code cleaner and more readable. To avoid this, run `using JuliaFormatter; format("."; style=BlueStyle())` in the REPL. If any changes are automatically applied, `pull` them to your computer.
-1. **Render to PDF.** Once you're satisfied with your preview, render the document to PDF using "Quarto: Render PDF" from the Command Palette, or run `quarto render index.qmd --to typst` in the terminal. Typst is a modern typesetting system that creates beautiful PDFs with much faster rendering than LaTeX.
-1. **Submit PDF to Canvas.** Upload the generated PDF file to the corresponding Canvas assignment. Make sure the PDF contains your NetID and the completed plot showing the noisy sine wave measurements and true function.
+    $$
+    A = U \Sigma V^\top
+    $$
 
-## Code
+  - \(U\): left singular vectors, \(m \times m\) (orthonormal)  
+    \(V\): right singular vectors, \(n \times n\) (orthonormal)
+  - \(\Sigma\): diagonal with singular values \(\Sigma_{1} \ge \cdots \ge \Sigma_r > 0\)
 
+- **Idea behind truncation**
+  - Singular values often decay rapidly in real data.
+  - Only the leading components are needed.
+
+- **Definition of TSVD**
+  - Partition:
+
+    $$
+    A = U_k \Sigma_k V_k^\top + U_{>k} \Sigma_{>k} V_{>k}^\top
+    $$
+
+  - The truncated rank-\(k\) approximation:
+
+    $$
+    A_k = U_k \Sigma_k V_k^\top
+    $$
+
+  - We keep the first \(k\) diagonal entries of \(\Sigma\) and discard the rest.
+
+
+
+## Worked Example
+
+## Strengths, Limitations, and Appropriate Use cases 
+
+## Connections to Course Themes 
+
+## Citations and Bibliography 
+
+
+### Code
 
 ```{julia}
 #| eval: false
