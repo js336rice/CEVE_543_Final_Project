@@ -4,7 +4,6 @@ subtitle: "CEVE 543 Final Presentation"
 author: Jonah Schaechter # edit this line only
 date: 2025-11-14
 
-
 engine: julia
 julia:
   exeflags: ["+1.11"] # ensures version 1.11
@@ -41,20 +40,18 @@ code-line-numbers: false
 code-block-font-size: "0.85em"
 ---
 
-
-
 ## Mathematical Framework
 
 - **Start from the full SVD**
-  - Any real matrix \(A \in \mathbb{R}^{m \times n}\) can be decomposed into
+  - Any real matrix $A \in \mathbb{R}^{m \times n}$ can be decomposed into
 
     $$
     A = U \Sigma V^\top
     $$
 
-  - \(U\): left singular vectors, \(m \times m\) (orthonormal)  
-    \(V\): right singular vectors, \(n \times n\) (orthonormal)
-  - \(\Sigma\): diagonal with singular values \(\Sigma_{1} \ge \cdots \ge \Sigma_r > 0\)
+  - $U$: left singular vectors, $m \times m$ (orthonormal)  
+    $V$: right singular vectors, $n \times n$ (orthonormal)
+  - $\Sigma$: diagonal with singular values $\Sigma_{1} \ge \cdots \ge \Sigma_r > 0$
 
 - **Idea behind truncation**
   - Singular values often decay rapidly in real data.
@@ -67,15 +64,16 @@ code-block-font-size: "0.85em"
     A = U_k \Sigma_k V_k^\top + U_{>k} \Sigma_{>k} V_{>k}^\top
     $$
 
-  - The truncated rank-\(k\) approximation:
+  - The truncated rank-$k$ approximation:
 
     $$
     A_k = U_k \Sigma_k V_k^\top
     $$
 
-  - We keep the first \(k\) diagonal entries of \(\Sigma\) and discard the rest.
+  - In other words: we keep the first $k$ diagonal entries of $\Sigma$ and discard the rest.
+  - We then plug this $\Sigma_k$ back into $U \Sigma_k V^\top = A$ in order to obtain $A_k$, the dimensionally reduced version of $A$ with $k$ dimensions. 
 
-
+Note: expand more on the math behind this decomposition. 
 
 ## Worked Example
 
@@ -84,7 +82,6 @@ code-block-font-size: "0.85em"
 ## Connections to Course Themes 
 
 ## Citations and Bibliography 
-
 
 ### Code
 
@@ -103,4 +100,3 @@ print(svd.explained_variance_ratio_)
 print(svd.explained_variance_ratio_.sum())
 print(svd.singular_values_)
 ```
-
