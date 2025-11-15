@@ -138,4 +138,13 @@ Students should think about the knowledge they gained in this lecture of TSVD as
 
 ## Citations and Bibliography 
 
+Singular Value Decomposition (SVD): Overview. Directed by Steve Brunton, 2020. YouTube, https://www.youtube.com/watch?v=gXbThCXjZFM.
+
+Truncated SVD and Its Applications. https://langvillea.people.charleston.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html. Accessed 14 Nov. 2025.
+
+“TruncatedSVD.” Scikit-Learn, https://scikit-learn/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html. Accessed 14 Nov. 2025.
+
+“Unveiling the Hidden Gems: Exploring Important Features with Truncated SVD and PCA.” DEV Community, 20 May 2023, https://dev.to/elldora/unveiling-the-hidden-gems-exploring-important-features-with-truncated-svd-and-pca-22j6.
+
+
 
