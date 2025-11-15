@@ -1,3 +1,5 @@
+## Note: Some of the Latex equations don't render in the README on github, but they do render in the pdf. 
+
 
 ## Mathematical Framework
 
