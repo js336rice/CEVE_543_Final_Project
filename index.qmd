@@ -77,13 +77,15 @@ Note: expand more on the math behind this decomposition.
 
 ## Worked Example
 
-## Strengths, Limitations, and Appropriate Use cases 
+Go through the following: 
 
-## Connections to Course Themes 
+![TruncatedSVD in SciKitLearn](TSVDSciKit.png)
 
-## Citations and Bibliography 
 
-### Code
+- **Important components of this function:**
+  - n_compontents: Desired dimensionality of output.
+  - n_iter: number of iterations of random svd solver.  Default is 5.  Recommend increasing it if your matrix may be sparse, and/or has a slowly decaying variability in its components. 
+  - random_state: Random number seed to use for randomized SVD.
 
 ```{julia}
 #| eval: false
@@ -100,3 +102,23 @@ print(svd.explained_variance_ratio_)
 print(svd.explained_variance_ratio_.sum())
 print(svd.singular_values_)
 ```
+
+
+- **How to intepret outputs:**
+  - Like PCA, we can look at the individual components of our data by doing $A_d = U_k \Sigma_d V_k^\top$, where $d$ is the dimension or component we want to look along. 
+  - Unlike PCA however, we can also compare $A_k$ to $A$, in order to see what $A$ looks like with all of the noise removed.  
+
+
+
+## Strengths, Limitations, and Appropriate Use cases 
+
+
+- **Strenghts:**
+  - 
+
+
+## Connections to Course Themes 
+
+## Citations and Bibliography 
+
+
