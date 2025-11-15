@@ -113,8 +113,19 @@ print(svd.singular_values_)
 ## Strengths, Limitations, and Appropriate Use cases 
 
 
-- **Strenghts:**
-  - 
+- **Strengths:**
+  - Improving interpretability: By looking along each dimension, or by looking at the reduced data, we can sometimes improve the interpretability of our data or the trends within it, much like PCA. 
+  - Noise filtering: If you suspect your data might be noisy, TSVD is an effective way to find trends outside of that.
+  - Stabilization of ill-posed problems: TSVD can regularize data in order to stop small background values from blowing things up or causing too much chaos. 
+
+- **Limitations:**
+  - Hard truncation can remove important data 
+  - Relevant to previous point: TSVD is sensitive to our choice in k
+  - TSVD assumes a linear subspace structure: not suitable for non-linear subspaces
+  - Sensitive to outliers: TSVD is good for sparse matrices, but NOT for matrices with one or two unique outliers.  In other words, good if you only have a few extreme storms, NOT GOOD if you only have one very extreme storm. 
+
+- **Appropriate Use Cases:**
+  -
 
 
 ## Connections to Course Themes 
