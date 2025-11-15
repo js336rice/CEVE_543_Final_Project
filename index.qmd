@@ -125,10 +125,16 @@ print(svd.singular_values_)
   - Sensitive to outliers: TSVD is good for sparse matrices, but NOT for matrices with one or two unique outliers.  In other words, good if you only have a few extreme storms, NOT GOOD if you only have one very extreme storm. 
 
 - **Appropriate Use Cases:**
-  -
+  - Denoising Radar or gridded precipitation 
+  - Uncovering dominant rainfall patterns, like El Nino/La Nina
+  - Identifying low-rank structures or trends in extreme event ensembles 
 
 
 ## Connections to Course Themes 
+
+Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD. 
+
+
 
 ## Citations and Bibliography 
 
