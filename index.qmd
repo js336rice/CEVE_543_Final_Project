@@ -1,5 +1,8 @@
 ---
 title: "Truncated SVD Lecture Notes"
+bibliography: references.bib
+nocite: |
+  @*
 subtitle: "CEVE 543 Final Presentation"
 author: Jonah Schaechter # edit this line only
 date: 2025-11-14
@@ -132,7 +135,7 @@ print(svd.singular_values_)
 
 ## Connections to Course Themes 
 
-Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD. 
+Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD. [@stevebrunton_singularvaluedecompositionsvd:2020a]
 
 
 
@@ -147,4 +150,6 @@ Truncated SVD and Its Applications. https://langvillea.people.charleston.edu/DIS
 “Unveiling the Hidden Gems: Exploring Important Features with Truncated SVD and PCA.” DEV Community, 20 May 2023, https://dev.to/elldora/unveiling-the-hidden-gems-exploring-important-features-with-truncated-svd-and-pca-22j6.
 
 
+
+## References
 
