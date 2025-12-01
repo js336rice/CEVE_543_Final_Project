@@ -1,8 +1,7 @@
 ---
 title: "Truncated SVD Lecture Notes"
 bibliography: references.bib
-nocite: |
-  @*
+nocite: "@*"
 subtitle: "CEVE 543 Final Presentation"
 author: Jonah Schaechter # edit this line only
 date: 2025-11-14
@@ -140,8 +139,15 @@ Students should think about the knowledge they gained in this lecture of TSVD as
 
 
 
-Temporary debug citations:
-[@Exploring_tsvd; @scikitlearn_truncatedsvd; @TSVD_and_applications; @lai_tsvd2020; @stevebrunton_svd2020]
 
+::: {.content-hidden when-format="html" when-format="typst"}
+
+[@Exploring_tsvd;
+ @scikitlearn_truncatedsvd;
+ @TSVD_and_applications;
+ @lai_tsvd2020;
+ @stevebrunton_svd2020]
+
+:::
 
 
