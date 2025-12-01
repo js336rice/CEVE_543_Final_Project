@@ -151,15 +151,17 @@ print(svd.singular_values_)
 ### Discuss [@lai_tsvd2020]
 
 TSVD used to analyze GPS water data 
-- GPS = a geodetic tool for detecting elastic deformation caused by water-mass loading.
+
+
+- **GPS = a geodetic tool for detecting elastic deformation caused by water-mass loading**
   - Water weight from groundwater pushes earth's surface down.   Less water, land surface moves back up
-- Also stands for "Global Position System", but is a different Global Positioning System than what we're used to
-- Cycles align with Wet-Dry monsoon patterns
-- GPS Spatial patterns observed differ from GLDAS
+- **Also stands for "Global Position System", but is a different Global Positioning System than what we're used to**
+- **Cycles align with Wet-Dry monsoon patterns**
+- **GPS Spatial patterns observed differ from GLDAS**
   - GLDAS is a land surface modeling framework 
   - Utility in using dimensionality reduction techniques to analyze data and compare to models
   - Differences in magnitude, and in northern/eastern Taiwan 
-- Analyzing data on impacts of rainfall (land elevation from rainwater storage) and using that to derive insights about rainall patterns, like monsoon patterns. 
+- **Analyzing data on impacts of rainfall (land elevation from rainwater storage) and using that to derive insights about rainall patterns, like monsoon patterns**
 
 
 
