@@ -41,6 +41,14 @@ code-line-numbers: false
 code-block-font-size: "0.85em"
 ---
 
+## Begin by discussing motivation 
+
+- Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  
+- If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse
+  - such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view
+- or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD.
+
+
 ## Mathematical Framework
 
 - **Start from the full SVD**
@@ -140,7 +148,20 @@ print(svd.singular_values_)
 
 ## Connections to Course Themes 
 
-Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD.
+### Discuss [@lai_tsvd2020]
+
+TSVD used to analyze GPS water data 
+- GPS = a geodetic tool for detecting elastic deformation caused by water-mass loading.
+  - Water weight from groundwater pushes earth's surface down.   Less water, land surface moves back up
+- Also stands for "Global Position System", but is a different Global Positioning System than what we're used to
+- Cycles align with Wet-Dry monsoon patterns
+- GPS Spatial patterns observed differ from GLDAS
+  - GLDAS is a land surface modeling framework 
+  - Utility in using dimensionality reduction techniques to analyze data and compare to models
+  - Differences in magnitude, and in northern/eastern Taiwan 
+- Analyzing data on impacts of rainfall (land elevation from rainwater storage) and using that to derive insights about rainall patterns, like monsoon patterns. 
+
+
 
 
 
