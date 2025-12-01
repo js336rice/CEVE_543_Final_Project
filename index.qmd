@@ -135,21 +135,13 @@ print(svd.singular_values_)
 
 ## Connections to Course Themes 
 
-Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD. [@stevebrunton_singularvaluedecompositionsvd:2020a]
+Students should think about the knowledge they gained in this lecture of TSVD as an upgrade or addition to their existing knowledge of PCA.  If they feel like PCA would be well suited to an application, but they also think that their matrix might be sparse, such as if they're looking at a few extreme storms seperated by long periods of time, or if they want the option to look at the dimensionally reduced data all in a single view, or if they think that reducing noise in their data might improve the perfomance in their model, they should consider TSVD. [@stevebrunton_svd2020]
 
 
 
-## Citations and Bibliography 
 
-Singular Value Decomposition (SVD): Overview. Directed by Steve Brunton, 2020. YouTube, https://www.youtube.com/watch?v=gXbThCXjZFM.
-
-Truncated SVD and Its Applications. https://langvillea.people.charleston.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html. Accessed 14 Nov. 2025.
-
-“TruncatedSVD.” Scikit-Learn, https://scikit-learn/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html. Accessed 14 Nov. 2025.
-
-“Unveiling the Hidden Gems: Exploring Important Features with Truncated SVD and PCA.” DEV Community, 20 May 2023, https://dev.to/elldora/unveiling-the-hidden-gems-exploring-important-features-with-truncated-svd-and-pca-22j6.
+Temporary debug citations:
+[@Exploring_tsvd; @scikitlearn_truncatedsvd; @TSVD_and_applications; @lai_tsvd2020; @stevebrunton_svd2020]
 
 
-
-## References
 
